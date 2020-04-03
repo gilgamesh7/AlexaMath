@@ -1,0 +1,27 @@
+{
+  "name": "alexamath",
+  "version": "1.0.0",
+  "description": "Alexa calculator skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilgamesh7/AlexaMath.git"
+  },
+  "keywords": [
+    "calculator",
+    "alexa"
+  ],
+  "author": "Rajesh Babu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilgamesh7/AlexaMath/issues"
+  },
+  "homepage": "https://github.com/gilgamesh7/AlexaMath#readme",
+  "dependencies": {
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.28.0"
+  }
+}

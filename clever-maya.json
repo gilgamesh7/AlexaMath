@@ -1,0 +1,152 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "clever maya",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AddIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{firstNumber}"
+                            ]
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{secondNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Add two numbers",
+                        "{firstNumber} plus {secondNumber}",
+                        "add {firstNumber} and {secondNumber}"
+                    ]
+                },
+                {
+                    "name": "SubtractIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{secondNumber} minus {firstNumber}",
+                        "perform subtraction",
+                        "subtract {secondNumber} from {firstNumber}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AddIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.448040471033.1264575733009"
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.448040471033.518771668565"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SubtractIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": ""
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": ""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.448040471033.1264575733009",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the first Number ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.448040471033.518771668565",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the second nmber ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
